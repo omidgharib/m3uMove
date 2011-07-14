@@ -10,7 +10,7 @@ narwhal m3uMove.js c:\list.m3u c:\music
 How do I export a playlist in M3U format?
 ------
 
-![Winamp](http://imsky.github.com/m3uMove/winamp.png)
+![Winamp](http://github.com/imsky/m3uMove/raw/master/winamp.png)
 
 Compatibility
 ------
