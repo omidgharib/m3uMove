@@ -1,5 +1,9 @@
 var f = require("file");
-var help = "M3U Move by Ivan Malopinsky (http://imsky.co)\nUsage: m3u.js <path to .m3u file> <directory to copy the music files> [<mode>]\nExample: m3u.js c:\\test.m3u c:\\music\nExample: m3u.js c:\\test.m3u c:\\music copy # Copies files instead of moving them";
+var help =
+"M3U Move by Ivan Malopinsky (http://imsky.co)\n\
+Usage: m3u.js <path to .m3u file> <directory to copy the music files> [<mode>]\n\
+Example: m3u.js c:\\test.m3u c:\\music\n\
+Example: m3u.js c:\\test.m3u c:\\music copy # Copies files instead of moving them";
 if (system.args.length < 3 || system.args.length > 4) {
 	print(help);
 } else {
