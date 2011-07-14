@@ -3,8 +3,8 @@ m3uMove is a CommonJS-based script that processes files inside a .m3u playlist f
 Usage
 ------
 ```
-m3u.js <path to .m3u file> <directory to copy the music files> [<mode>]
-m3u.js c:\list.m3u c:\music
+narwhal m3uMove.js <path to .m3u file> <directory to copy the music files> [<mode>]
+narwhal m3uMove.js c:\list.m3u c:\music
 ```
 
 Compatibility
