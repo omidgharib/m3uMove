@@ -27,14 +27,14 @@ if (system.args.length < 3 || system.args.length > 4) {
 						print("File doesn't exist: " + list[song]);
 					}
 				}
-				var filenameSplit = f.split(s);
 				if (s !== "") {
+					var filenameSplit = f.split(s);
 					pList.push([s, filenameSplit[filenameSplit.length - 1]]);
 				}
 			}
 			for (var i = 0, lCount = pList.length; i < lCount; i++) {
 				try {
-					if (mode == "move") {
+					if (mode === "move") {
 						f.move(pList[i][0], dir + "/" + pList[i][1]);
 					} else {
 						f.copy(pList[i][0], dir + "/" + pList[i][1]);
