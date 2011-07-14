@@ -18,18 +18,15 @@ if (system.args.length < 3 || system.args.length > 4) {
 			var list = f.read(lFile).split("\n");
 			var dir = f.canonical(fDir);
 			var pList = [];
-			for (var song in list) {
-				var s = "";
-				if (list[song].toLowerCase().indexOf(".mp3") !== -1 || list[song].toLowerCase().indexOf(".ogg") !== -1) {
-					if (f.exists(list[song]) && f.isFile(list[song])) {
-						s = list[song];
+			for (var line in list) {
+				if (list[line].toLowerCase().indexOf(".mp3") !== -1 || list[line].toLowerCase().indexOf(".ogg") !== -1) {
+					if (f.exists(list[line]) && f.isFile(list[line])) {
+						var song = list[line];
+						var songFile = f.split(song);
+						pList.push([song, songFile[songFile.length - 1]]);
 					} else {
-						print("File doesn't exist: " + list[song]);
+						print("File doesn't exist: " + list[line]);
 					}
-				}
-				if (s !== "") {
-					var filenameSplit = f.split(s);
-					pList.push([s, filenameSplit[filenameSplit.length - 1]]);
 				}
 			}
 			for (var i = 0, lCount = pList.length; i < lCount; i++) {
