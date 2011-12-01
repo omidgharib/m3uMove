@@ -19,7 +19,7 @@ if (system.args.length < 3 || system.args.length > 4) {
 			var dir = f.canonical(fDir);
 			var pList = [];
 			for (var line in list) {
-				if (list[line].toLowerCase().test(/\.mp3|\.ogg|\.wma/i)) {
+				if (/\.mp3|\.ogg|\.wma/i.test(list[line].toLowerCase())) {
 					if (f.exists(list[line]) && f.isFile(list[line])) {
 						var song = list[line];
 						var songFile = f.split(song);
